@@ -30,7 +30,7 @@ class Student:
 
 
     # first Image......
-    img=Image.open(r"C:\Users\AJAY\Desktop\Face_Recognition_System\college_images\face-recognition.png")
+    img=Image.open(r"college_images\scaled-1.jpeg")
     img=img.resize((500,130),Image.Resampling.LANCZOS)
     self.photoimg=ImageTk.PhotoImage(img)
 
@@ -38,7 +38,7 @@ class Student:
     f_lbl.place(x=0,y=0,width=500,height=130)
 
 
-    img1=Image.open(r"C:\Users\AJAY\Desktop\Face_Recognition_System\college_images\smart-attendance.jpg")
+    img1=Image.open(r"college_images\FR-1.jpg")
     img1=img1.resize((500,130),Image.Resampling.LANCZOS)
     self.photoimg1=ImageTk.PhotoImage(img1)
 
@@ -46,7 +46,7 @@ class Student:
     f_lbl.place(x=500,y=0,width=500,height=130)
 
 
-    img2=Image.open(r"C:\Users\AJAY\Desktop\Face_Recognition_System\college_images\iStock-182059956_18390_t12.jpg")
+    img2=Image.open(r"college_images\facialrecognition.png")
     img2=img2.resize((500,130),Image.Resampling.LANCZOS)
     self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -55,7 +55,7 @@ class Student:
 
 
     # bg image
-    img3=Image.open(r"C:\Users\AJAY\Desktop\Face_Recognition_System\college_images\wp2551980.jpg")
+    img3=Image.open(r"college_images\bc.jpg")
     img3=img3.resize((1530,710),Image.Resampling.LANCZOS)
     self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -63,7 +63,7 @@ class Student:
     bg_img.place(x=0,y=130,width=1530,height=710)
 
 
-    title_lbl=Label(bg_img,text="STUDENT MANAGEMENT SYSTEM", font=("times new roman",35,"bold"),bg="white",fg="blue")
+    title_lbl=Label(bg_img,text="STUDENT ATTENDANCE SYSTEM", font=("times new roman",35,"bold"),bg="white",fg="blue")
     title_lbl.place(x=0,y=0,width=1530,height=45)
 
     main_frame=Frame(bg_img,bd=2,bg="white")
@@ -73,7 +73,7 @@ class Student:
     Left_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Details",font=("times new roman",12,"bold"))
     Left_frame.place(x=10,y=10,width=730,height=580)
 
-    img_left=Image.open(r"C:\Users\AJAY\Desktop\Face_Recognition_System\college_images\AdobeStock_303989091.jpeg")
+    img_left=Image.open(r"college_images\edtech-slider.png")
     img_left=img_left.resize((720,130),Image.Resampling.LANCZOS)
     self.photoimg_left=ImageTk.PhotoImage(img_left)
 
@@ -215,28 +215,28 @@ class Student:
     btn_frame.place(x=0,y=200,width=715,height=35)
 
     save_btn=Button(btn_frame,command=self.add_data,text="Save",width=
-    17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     save_btn.grid(row=0,column=0)
 
     update_btn=Button(btn_frame,command=self.update_data,text="Update",width=
-    17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     update_btn.grid(row=0,column=1)
 
     delete_btn=Button(btn_frame,command=self.delete_data,text="Delete",width=
-    17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     delete_btn.grid(row=0,column=2)
 
     reset_btn=Button(btn_frame,command=self.reset_data,text="Reset",width=
-    17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     reset_btn.grid(row=0,column=3)
 
     btn_frame1=Frame(class_Student_frame,bd=2,relief=RIDGE,bg="white")
     btn_frame1.place(x=0,y=235,width=715,height=35)
 
-    take_photo_btn=Button(btn_frame1,command=self.generate_dataset,text="Take Photo Sample",width=35,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    take_photo_btn=Button(btn_frame1,command=self.generate_dataset,text="Take Photo Sample",width=35,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     take_photo_btn.grid(row=0,column=0)
 
-    update_photo_btn=Button(btn_frame1,text="Update Photo Sample",width=35,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    update_photo_btn=Button(btn_frame1,text="Update Photo Sample",width=35,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     update_photo_btn.grid(row=0,column=1)
     
 
@@ -247,7 +247,7 @@ class Student:
     Right_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Details",font=("times new roman",12,"bold"))
     Right_frame.place(x=750,y=10,width=720,height=580)
 
-    img_right=Image.open(r"C:\Users\AJAY\Desktop\Face_Recognition_System\college_images\gettyimages-1022573162.jpg")
+    img_right=Image.open(r"college_images\download.png")
     img_right=img_right.resize((720,130),Image.Resampling.LANCZOS)
     self.photoimg_right=ImageTk.PhotoImage(img_right)
 
@@ -258,7 +258,7 @@ class Student:
     Search_frame=LabelFrame(Right_frame,bd=2,bg="white",relief=RIDGE,text="Search System",font=("times new roman",12,"bold"))
     Search_frame.place(x=5,y=135,width=710,height=70)
 
-    search_label=Label(Search_frame,text="Search By:",font=("times new roman",15,"bold"),fg="white",bg="red")
+    search_label=Label(Search_frame,text="Search By:",font=("times new roman",15,"bold"),fg="white",bg="#FF8886")
     search_label.grid(row=0,column=0,padx=10,pady=5,sticky=W)
 
     search_combo=ttk.Combobox(Search_frame,font=("times new roman",13,"bold"),state="readonly",width=15)
@@ -269,10 +269,10 @@ class Student:
     search_entry=ttk.Entry(Search_frame,width=15,font=("times new roman",13,"bold"))
     search_entry.grid(row=0,column=2,padx=10,pady=5,sticky=W)
 
-    search_btn=Button(Search_frame,text="Search",width=12,font=("times new roman",12,"bold"),bg="blue",fg="white")
+    search_btn=Button(Search_frame,text="Search",width=12,font=("times new roman",12,"bold"),bg="#00aaff",fg="white")
     search_btn.grid(row=0,column=3,padx=4)
 
-    showAll_btn=Button(Search_frame,text="Show All",width=12,font=("times new roman",12,"bold"),bg="blue",fg="white")
+    showAll_btn=Button(Search_frame,text="Show All",width=12,font=("times new roman",12,"bold"),bg="#00aaff",fg="white")
     showAll_btn.grid(row=0,column=4,padx=4)
 
     # tabel frame   
