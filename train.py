@@ -17,7 +17,7 @@ class Train:
     title_lbl=Label(self.root,text="TRAIN DATA SET",font=("times new roman",35,"bold"),bg="white",fg="darkgreen")
     title_lbl.place(x=0,y=0,width=1530,height=45)
 
-    img_top=Image.open(r"college_images\facialrecognition.png")
+    img_top=Image.open(r"college_images\bc.jpg")
     img_top=img_top.resize((1530,325),Image.Resampling.LANCZOS)
     self.photoimg_top=ImageTk.PhotoImage(img_top)
 
@@ -25,11 +25,11 @@ class Train:
     f_lbl.place(x=0,y=55,width=1530,height=325)
 
     # button
-    b1_1=Button(self.root,text="TRAIN DATA",command=self.train_classifier,cursor="hand2",font=("times new roman",30,"bold"),bg="red",fg="white")
-    b1_1.place(x=0,y=380,width=1530,height=60)
+    b1_1=Button(self.root,text="TRAIN DATA",command=self.train_classifier,cursor="hand2",font=("times new roman",30,"bold"),bg="#FF8886",fg="white")
+    b1_1.place(x=530,y=380,width=500,height=60)
 
 
-    img_bottom=Image.open(r"college_images\opencv_face_reco_more_data.jpg")
+    img_bottom=Image.open(r"college_images\bc.jpg")
     img_bottom=img_bottom.resize((1530,325),Image.Resampling.LANCZOS)
     self.photoimg_bottom=ImageTk.PhotoImage(img_bottom)
 
