@@ -27,25 +27,51 @@ class Attendance:
     self.var_atten_attendance=StringVar()
 
 
-    # first img
-    img=Image.open(r"college_images\iStock-182059956_18390_t12.jpg")
-    img=img.resize((800,200),Image.Resampling.LANCZOS)
+    # # first img
+    # img=Image.open(r"college_images\iStock-182059956_18390_t12.jpg")
+    # img=img.resize((800,200),Image.Resampling.LANCZOS)
+    # self.photoimg=ImageTk.PhotoImage(img)
+
+    # f_lbl=Label(self.root,image=self.photoimg)
+    # f_lbl.place(x=0,y=0,width=800,height=200)
+
+    # # Second img
+    # img1=Image.open(r"college_images\facial_0.jpeg")
+    # img1=img1.resize((800,200),Image.Resampling.LANCZOS)
+    # self.photoimg1=ImageTk.PhotoImage(img1)
+
+    # f_lbl1=Label(self.root,image=self.photoimg1)
+    # f_lbl1.place(x=800,y=0,width=800,height=200)
+
+
+
+    # first Image......
+    img=Image.open(r"college_images\scaled-1.jpeg")
+    img=img.resize((500,130),Image.Resampling.LANCZOS)
     self.photoimg=ImageTk.PhotoImage(img)
 
     f_lbl=Label(self.root,image=self.photoimg)
-    f_lbl.place(x=0,y=0,width=800,height=200)
+    f_lbl.place(x=0,y=0,width=500,height=130)
 
-    # Second img
-    img1=Image.open(r"college_images\smart-attendance.jpg")
-    img1=img1.resize((800,200),Image.Resampling.LANCZOS)
+
+    img1=Image.open(r"college_images\FR-1.jpg")
+    img1=img1.resize((500,130),Image.Resampling.LANCZOS)
     self.photoimg1=ImageTk.PhotoImage(img1)
 
-    f_lbl1=Label(self.root,image=self.photoimg1)
-    f_lbl1.place(x=800,y=0,width=800,height=200)
+    f_lbl=Label(self.root,image=self.photoimg1)
+    f_lbl.place(x=500,y=0,width=500,height=130)
+
+
+    img2=Image.open(r"college_images\facialrecognition.png")
+    img2=img2.resize((500,130),Image.Resampling.LANCZOS)
+    self.photoimg2=ImageTk.PhotoImage(img2)
+
+    f_lbl=Label(self.root,image=self.photoimg2)
+    f_lbl.place(x=1000,y=0,width=550,height=130)
 
 
     # bg image
-    img3=Image.open(r"college_images\wp2551980.jpg")
+    img3=Image.open(r"college_images\bc.jpg")
     img3=img3.resize((1530,710),Image.Resampling.LANCZOS)
     self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -62,8 +88,8 @@ class Attendance:
     Left_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Attendance Details",font=("times new roman",12,"bold"))
     Left_frame.place(x=10,y=10,width=730,height=580)
 
-    img_left=Image.open(r"college_images\AdobeStock_303989091.jpeg")
-    img_left=img_left.resize((720,130),Image.Resampling.LANCZOS)
+    img_left=Image.open(r"college_images\std.jpg")
+    img_left=img_left.resize((720,330),Image.Resampling.LANCZOS)
     self.photoimg_left=ImageTk.PhotoImage(img_left)
 
     f_lbl=Label(Left_frame,image=self.photoimg_left)
@@ -88,7 +114,7 @@ class Attendance:
     atten_rool.grid(row=0,column=3,pady=8)
 
     # name
-    nameLabel=Label(left_inside_frame,text="Date:",font=("comicsansns",13,"bold"),bg="white")
+    nameLabel=Label(left_inside_frame,text="Name:",font=("comicsansns",13,"bold"),bg="white")
     nameLabel.grid(row=1,column=0)
 
     atten_name=ttk.Entry(left_inside_frame,width=22,textvariable=self.var_atten_name,font=("times new roman",11,"bold"))
@@ -133,16 +159,16 @@ class Attendance:
     btn_frame=Frame(left_inside_frame,bd=2,relief=RIDGE,bg="white")
     btn_frame.place(x=0,y=300,width=715,height=35)
 
-    save_btn=Button(btn_frame,text="Import csv",command=self.importCsv,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    save_btn=Button(btn_frame,text="Import csv",command=self.importCsv,width=17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     save_btn.grid(row=0,column=0)
 
-    update_btn=Button(btn_frame,text="Export csv",command=self.exportCsv,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    update_btn=Button(btn_frame,text="Export csv",command=self.exportCsv,width=17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     update_btn.grid(row=0,column=1)
 
-    delete_btn=Button(btn_frame,text="Update",width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    delete_btn=Button(btn_frame,text="Update",width=17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     delete_btn.grid(row=0,column=2)
 
-    reset_btn=Button(btn_frame,text="Reset",command=self.reset_data,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+    reset_btn=Button(btn_frame,text="Reset",command=self.reset_data,width=17,font=("times new roman",13,"bold"),bg="#00aaff",fg="white")
     reset_btn.grid(row=0,column=3)
 
 
